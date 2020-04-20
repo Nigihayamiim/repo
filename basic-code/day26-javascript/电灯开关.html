@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电灯开关</title>
+</head>
+<body>
+    <img src="img/off.gif" id="light">
+
+    <script>
+
+        var element = document.getElementById("light");
+        var flag = false;
+        element.onclick = function(){
+            if (flag) {
+                element.src="img/off.gif";
+                flag = false;
+            }else {
+                element.src="img/on.gif";
+                flag = true;
+            }
+        };
+        
+    </script>
+</body>
+</html>

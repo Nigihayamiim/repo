@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动跳转</title>
+</head>
+
+<style>
+
+    #time{
+        color: red;
+    }
+
+</style>
+
+<body>
+
+    <p align="center"><span id="time">5</span>秒之后，自动跳转...</p>
+
+
+<script>
+
+    var number = 5;
+    var time = document.getElementById("time");
+    function f(){
+        number--;
+        if (number==0){
+            location.href = "https://www.baidu.com";
+            clearInterval(id)
+        }
+        time.innerText=number;
+    }
+    var id = setInterval(f,1000);
+
+</script>
+
+</body>
+</html>
